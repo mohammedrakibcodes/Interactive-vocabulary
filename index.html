@@ -105,7 +105,7 @@
 
     <!-- Section One -->
     <section
-      class="flex flex-col-reverse md:flex-row justify-between items-center py-5 w-11/12 mx-auto"
+      class="flex flex-col-reverse md:flex-row justify-between items-center py-8 md:py-16 w-11/12 mx-auto mb-16 md:mb-12 gap-10"
     >
       <!-- Left Side -->
       <div class="flex-1">
@@ -123,62 +123,191 @@
 
         <!-- Form -->
         <fieldset
-          class="fieldset bg-base-200 border-base-300 rounded-box w-full max-w-xs md:max-w-md border p-4 mx-auto md:mx-0"
+          class="fieldset bg-base-100 border border-gray-200 rounded-2xl w-full max-w-[320px] md:max-w-lg p-4 md:p-8 shadow-xl mx-auto md:mx-0"
         >
-          <legend class="fieldset-legend">Start Learning Today</legend>
+          <legend class="fieldset-legend text-lg font-bold">
+            Start Learning Today
+          </legend>
 
-          <label class="label">Your Name</label>
+          <label class="label font-medium">Your Name</label>
           <input
             type="text"
-            class="input w-full"
+            class="input input-bordered w-full"
             placeholder="Enter your name"
           />
 
-          <label class="label">Your Email</label>
+          <label class="label font-medium mt-2">Your Email</label>
           <input
             type="email"
-            class="input w-full"
+            class="input input-bordered w-full"
             placeholder="example@gmail.com"
           />
 
-          <button class="btn btn-primary mt-4">Start Learning</button>
+          <label class="label font-medium mt-2">Password</label>
+          <input
+            type="password"
+            class="input input-bordered w-full"
+            placeholder="Enter password"
+          />
+
+          <div class="text-right mt-2">
+            <a class="text-sm text-primary hover:underline cursor-pointer">
+              Forgot password?
+            </a>
+          </div>
+
+          <button class="btn btn-primary mt-4 w-full">Continue</button>
+
+          <div class="divider text-sm">OR</div>
+
+          <button
+            class="btn bg-white text-black border border-[#e5e5e5] hover:bg-gray-100 w-full"
+          >
+            <svg
+              aria-label="Google logo"
+              width="16"
+              height="16"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 512 512"
+            >
+              <g>
+                <path d="m0 0H512V512H0" fill="#fff"></path>
+                <path
+                  fill="#34a853"
+                  d="M153 292c30 82 118 95 171 60h62v48A192 192 0 0190 341"
+                ></path>
+                <path
+                  fill="#4285f4"
+                  d="m386 400a140 175 0 0053-179H260v74h102q-7 37-38 57"
+                ></path>
+                <path
+                  fill="#fbbc02"
+                  d="m90 341a208 200 0 010-171l63 49q-12 37 0 73"
+                ></path>
+                <path
+                  fill="#ea4335"
+                  d="m153 219c22-69 116-109 179-50l55-54c-78-75-230-72-297 55"
+                ></path>
+              </g>
+            </svg>
+
+            Continue with Google
+          </button>
         </fieldset>
       </div>
 
       <!-- Right Image -->
       <div class="flex-1 flex justify-end">
         <img
-          class="w-full max-w-lg ml-auto"
+          class="w-full max-w-md lg:max-w-xl xl:max-w-2xl ml-auto"
           src="./assets/Learning languages-rafiki.png"
           alt=""
         />
       </div>
     </section>
 
-    <!-- Section Two -->
+   <!--Section 2 -->
+<section>
+  <h2 class="text-4xl font-bold text-center mb-8">
+    <span class="text-sky-500">Let's</span> Learn Vocabulary
+  </h2>
 
-    <section>
-      <h2 class="text-4xl font-bold mb-8 text-center">
-        <span class="text-sky-500"> Let's</span> Learn Vocabulary
-      </h2>
+  <div class="flex justify-center mb-8 px-4">
 
+    <div
+      class="join w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-6/12"
+    >
+
+      <input
+        type="text"
+        id="input-search"
+        placeholder="Search Vocabulary"
+        class="input join-item w-full border border-gray-200 focus:outline-none focus:ring-0 focus:border-gray-300"
+      />
+
+      <button id="btn-search" class="btn btn-primary join-item">
+        Search
+      </button>
+
+    </div>
+
+  </div>
+
+  <div
+    id="level-container"
+    class="flex gap-5 flex-wrap justify-center"
+  ></div>
+</section>
+
+<!--  -->
+<!--  -->
+ 
+
+    <!-- Loading  -->
+    <section
+      id="spinner"
+      class="hidden bg-gray-100 w-11/12 mx-auto my-10 p-5 rounded-xl"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+        <div class="bg-white p-5 rounded-xl space-y-4">
+          <div class="skeleton h-32 w-full"></div>
+          <div class="skeleton h-4 w-28"></div>
+          <div class="skeleton h-4 w-full"></div>
+          <div class="skeleton h-4 w-full"></div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl space-y-4">
+          <div class="skeleton h-32 w-full"></div>
+          <div class="skeleton h-4 w-28"></div>
+          <div class="skeleton h-4 w-full"></div>
+          <div class="skeleton h-4 w-full"></div>
+        </div>
+
+        <div class="bg-white p-5 rounded-xl space-y-4">
+          <div class="skeleton h-32 w-full"></div>
+          <div class="skeleton h-4 w-28"></div>
+          <div class="skeleton h-4 w-full"></div>
+          <div class="skeleton h-4 w-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3 -->
+    <section
+      id="word-container"
+      class="bg-gray-100 w-11/12 mx-auto my-10 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5 p-5 rounded-xl"
+    >
+      >
+      <div
+        class="text-center bg-blue-300 col-span-full rounded-xl py-10 space-y-6"
+      >
+        <p class="text-xl font-medium text-red-600 font-bangla">
+          আপনি এখনো কোন Lesson Select করেন নি
+        </p>
+        <h2 class="font-bold text-4xl font-bangla">একটি Lesson Select করুন।</h2>
+      </div>
+    </section>
+    
       <div
         id="level-container"
         class="flex gap-5 flex-wrap justify-center"
       ></div>
     </section>
 
-    <!-- Section 3 -->
-    <section
-      id="word-container"
-      class="bg-gray-100 p-10 w-11/12 mx-auto my-10 grid grid-cols-3 gap-5 py-10 px-5"
-    >
-      <div class="bg-white rounded-xl shadow-sm text-center">
-        <h2>Eager</h2>
-        <p>Meaning /Pronunciation</p>
-        <div>"আগ্রহী /ইগার "</div>
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+        <div id="details-container" class="space-y-5"></div>
+        <!--  -->
+
+        <!--  -->
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn">Close</button>
+          </form>
+        </div>
       </div>
-    </section>
+    </dialog>
 
     <script src="./scripts/index.js"></script>
   </body>
